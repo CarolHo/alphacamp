@@ -5,13 +5,27 @@
 
 	
 <style>
+ul, li{
+    margin: 0;
+    padding: 0;
+}
 .centeritem {display: block; margin-left: auto; margin-right: auto; }
 .logoimg {height: 150px; width: 250px;}
-.inputbox {height: width:300px; height:30px;}
-.button {border:none; solid #dcdcdc; background:#f2f2f2;}
+.searchf{ position: relative; width: 300px; }
+.inputbox {width:100%; height:30px;}
+.micropimage {height: 30px; position: absolute; top: 0; right: 0;} 
+.buttonlength {width:250px;}
+.langlength {width: 300px;}
+.navbar {float: right}
+.navli {float: left; list-style-type: none; padding: 10px;}
+#sidemenu {height: 100px;}
+a {text-decoration: none;} 
 a:hover {text-decoration:underline;}
-button:hover {color:black; border:1px solid #D9D9D9;}
-.navbar {float: right;}
+button {border: none;}
+button:hover {border:  1px solid black; font-weight:bold;}
+footer {position: absolute; bottom:0; width: 100%; background: lightgray;}
+.lf {float: left; list-style-type: none; padding: 10px; margin: 10px}
+.lr {float: right; list-style-type: none; padding: 10px; margin: 10px}
 
 
 </style>
@@ -19,62 +33,74 @@ button:hover {color:black; border:1px solid #D9D9D9;}
 
 </header>
 
+
 <body>
 
 
-    <div id="header">
+    <div id="sidemenu">
         <ul class="navbar">
             <li class="navli"><a href="#">You </a>
-
             </li>
             <li class="navli"><a href="#">Gmail</a>
-
             </li>
             <li class="navli"><a href="#">Images</a>
-
             </li>
             <li class="navli" id="icon">
-                <img src="http://bit.ly/1NHEwTW" height="auto" width="30" />
+            <img src="cat.jpg" height="auto" width="30" />
             </li>
             <li class="navli"><a href="#">carolyne.hong@gmail.com</a>
-
             </li>
         </ul>
     </div>
 
 
-
-
-
-
-
 	<div>
-		<img src="http://i.kinja-img.com/gawker-media/image/upload/s--pEKSmwzm--/c_scale,fl_progressive,q_80,w_800/1414228815325188681.jpg" class="centeritem" class="logoimg">
+		<img src="http://i.kinja-img.com/gawker-media/image/upload/s--pEKSmwzm--/c_scale,fl_progressive,q_80,w_800/1414228815325188681.jpg" class="centeritem logoimg">
 		<br/>
 	</div>
   <div>
-  	<input type="text" name="search" class="centeritem" class="inputbox">
+  	<div class="searchf centeritem">
+	  	<input type="text" name="search" class="inputbox">
+	  	<img class="micropimage" src="microp.png">
+    </div>
   	<br/>
 	</div>
-</body>
 
 
-
-
-  <div class="buttons">
-  	<button>Google Search</button>
+	<div class="centeritem buttonlength">
+  	<button >Google Search</button>
 		&nbsp;&nbsp;&nbsp;
     <button>I'm Feeling Lucky</button>
     <br> <br> <br>
-Google offered in:  <a href="https://www.google.com.sg/setprefs?sig=0_B2woZH2Z-gXjzWGhNHuvs1rLcTQ%3D&amp;hl=zh-CN&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwiZtoSi9u3aAhVEKo8KHdidCIMQ2ZgBCAg">中文(简体)</a>    <a href="https://www.google.com.sg/setprefs?sig=0_B2woZH2Z-gXjzWGhNHuvs1rLcTQ%3D&amp;hl=ms&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwiZtoSi9u3aAhVEKo8KHdidCIMQ2ZgBCAk">Bahasa Melayu</a>   
   </div>
-  
+  <div class="centeritem langlength">
+		Google offered in:  <a href="#">中文(简体)   </a>  <a href="#">Bahasa Melayu</a>   
+  </div>
  
-  
-  
+</body>
 
+  <footer>
+        <div class="leftfoot">
+            <ul>
+                <li class="lf"> <a href="#">Advertising</a>
+                </li>
+                <li class="lf"> <a href="#">Business</a>
+                </li>
+                <li class="lf"> <a href="#">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="leftfoot">
+            <ul>
+                <li class="lr"> <a href="#">Privacy</a>
+                </li>
+                <li class="lr"> <a href="#">Settings</a>
+                </li>
+            </ul>
+        </div>
+        
   
-
+  </footer>
 
 
 </html>
