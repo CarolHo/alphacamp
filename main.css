@@ -10,8 +10,8 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto Condensed"
-	position: relative;
+	font-family: "Roboto Condensed";
+
 
 }
 
@@ -33,7 +33,7 @@ h1,h2,h3,h4,h5,h6, p,ul,ol,li {margin: 0; padding:0}
 }
 
 
-.logo { float: left; } 
+.logo {float:left; } 
 
 .logo-image {
 	height: 40px;
@@ -62,9 +62,45 @@ body {
 }
 
 
-.centerpg {height: 100px; width: 100px ; margin-left: auto; margin-right: auto; }
+
+/* .centerpg {position: absolute; top: 50%;}..this line wouldn't work as the text align center command below would become useless..*/
+
+.centerpg {margin-top: 200px;}
 
 .centerpg h1  {
-   position: absolute;               
-   top:50%; }  
+   color: white;
+   margin: 8px;
+   text-align:center;
+   }  
 
+.list-group {text-align:center; }
+
+.list-group-item {margin: 8px; color: white; }
+
+/* why can't i put color white on the list group or centerpg (it should apply to all in container but no) */
+
+/*.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}*/
+
+/*.parent {
+  position: relative;
+}
+
+.child {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -70px 0 0 -170px;
+}*/
