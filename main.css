@@ -11,13 +11,24 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: "Roboto Condensed";
+}
 
-
+body {
+	font-size: 16px;
+	line-height: 1.5;
 }
 
 h1,h2,h3,h4,h5,h6, p,ul,ol,li {margin: 0; padding:0}
 
 <!-- e.g. h100p tab (install package control emmet); control D edit at same time-->
+
+p {
+	margin: 1em 0;
+}
+
+a:hover {
+	color: #ff9d00;
+}
 
 .clearfix:after { /*psuedo element*/
 	display: block;
@@ -25,13 +36,109 @@ h1,h2,h3,h4,h5,h6, p,ul,ol,li {margin: 0; padding:0}
 	clear: both;
 }
 
-#header { 
-	height: 40px; 
-	padding-left: 64px;
-	padding-rught: 64px;
-	background-color: black;
+/* All sections */
+section h2 {
+	margin: 1em 0 1em; 
+	font-size: 2.5em; /* 1em here = 16px base size * 2.5em font size, which in this case is 40px */
+	text-align: center;
+	text-transform: uppercase;
 }
 
+section h3 {
+	margin: 1em 0 0.5em;
+	font-weight: bold;
+}
+
+section h2:first-child,
+section h3:first-child {
+	margin-top: 0;
+}
+
+.container {
+	padding: 100px 64px;
+}
+
+.button {
+	display: inline-block;
+	border: 1px solid;
+	padding: 10px 15px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+.button:hover {
+	background: #ff9d00;
+	color: #fff;
+}
+
+
+/* Header */
+
+#header {
+	position: absolute;
+	width: 100%;
+	min-height: 40px;
+	padding-left: 64px;
+	padding-right: 64px;
+	background-color: #000;
+	z-index: 1;
+}
+
+.logo {
+	float: left;
+}
+
+.logo-image {
+	height: 40px;
+	width: auto;
+}
+
+.nav-list {
+	float: right;
+}
+
+.nav-list li {
+	float: left;
+	list-style-type: none;
+}
+
+.nav-list a {
+	display: inline-block;
+	padding: 12px;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/* About section */
+.summary {
+	display: flex;
+	flex-direction: row;
+}
+
+.col-left,
+.col-right {
+	width: 50%;
+}
+
+.col-right {
+	padding-left: 64px;
+}
+
+.avatar {
+	width: 100%;
+	height: auto;
+}
+
+.skills {
+	margin: 2em 0;
+	list-style-type: none;
+}
+
+.skill {
+	font-weight: bold;
+	margin-bottom: 1em;
+}
 
 .logo {float:left; } 
 
@@ -39,6 +146,7 @@ h1,h2,h3,h4,h5,h6, p,ul,ol,li {margin: 0; padding:0}
 	height: 40px;
 	width: auto;
 }
+
 
 .nav {float:right;}
 
@@ -52,30 +160,60 @@ h1,h2,h3,h4,h5,h6, p,ul,ol,li {margin: 0; padding:0}
 }
 
 
+/* Hero section */
+.hero {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: transparent url('vg_flowerbedsinholland.jpg') center center no-repeat fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 
-body {
+.hero:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
 
-  background: white url("vg_flowerbedsinholland.jpg") no-repeat center center scroll;
-  background-size: cover;
-  overflow: hidden;
- 
+.hero__content {
+	position: absolute;
+	width: 50%;
+	top: 40%;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+	text-align: center;
+
+	color: #fff;
+
+	z-index: 1;
+}
+
+.hero__title {
+	font-size: 3em;
+	margin-bottom: 1em;
+}
+
+.hero__icon {
+	margin: 1em;
+	color: white;
 }
 
 
-
 /* .centerpg {position: absolute; top: 50%;}..this line wouldn't work as the text align center command below would become useless..*/
+/* no longer used centerpg..created another div to envelope it to better control it */
 
-.centerpg {margin-top: 200px;}
-
-.centerpg h1  {
-   color: white;
-   margin: 8px;
-   text-align:center;
-   }  
-
-.list-group {text-align:center; }
-
-.list-group-item {margin: 8px; color: white; }
+/*centerpg {
+		height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}*/
 
 /* why can't i put color white on the list group or centerpg (it should apply to all in container but no) */
 
@@ -104,3 +242,12 @@ body {
 
   margin: -70px 0 0 -170px;
 }*/
+
+/* Services section */
+
+.service-items {display: flex; justify-content: space-around;}
+
+.service-item {
+	width:25%;
+
+}
